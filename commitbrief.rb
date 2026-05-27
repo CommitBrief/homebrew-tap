@@ -5,13 +5,13 @@
 class Commitbrief < Formula
   desc "LLM-powered local code review CLI"
   homepage "https://github.com/CommitBrief/commitbrief"
-  version "0.9.1"
+  version "0.9.2"
   license "GPL-3.0-or-later"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/CommitBrief/commitbrief/releases/download/v0.9.1/commitbrief_0.9.1_darwin_x86_64.tar.gz"
-      sha256 "4db2a66470dc6a1612f1d061231256cbeacf9f1faa34901f3c9282268336af59"
+      url "https://github.com/CommitBrief/commitbrief/releases/download/v0.9.2/commitbrief_0.9.2_darwin_x86_64.tar.gz"
+      sha256 "889ec14ae741f7d9ed0392ebe9f3efdae73a8088c4d4aad999c20041bbcc30ac"
 
       define_method(:install) do
         bin.install "commitbrief"
@@ -19,8 +19,8 @@ class Commitbrief < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/CommitBrief/commitbrief/releases/download/v0.9.1/commitbrief_0.9.1_darwin_arm64.tar.gz"
-      sha256 "b55fb3b4be3581517e3d98f43abf997f7977d1f38ee7890e473ba033f05d1ee7"
+      url "https://github.com/CommitBrief/commitbrief/releases/download/v0.9.2/commitbrief_0.9.2_darwin_arm64.tar.gz"
+      sha256 "ce454faa9f51cb67eb4e2fe81765715a9e25340280ecec820db5d7ab4c7d80d0"
 
       define_method(:install) do
         bin.install "commitbrief"
@@ -31,16 +31,16 @@ class Commitbrief < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/CommitBrief/commitbrief/releases/download/v0.9.1/commitbrief_0.9.1_linux_x86_64.tar.gz"
-      sha256 "288bc880e86353a7f2d1bafe0c65a2e721431e3539ac04bb700526ea3fe5ce58"
+      url "https://github.com/CommitBrief/commitbrief/releases/download/v0.9.2/commitbrief_0.9.2_linux_x86_64.tar.gz"
+      sha256 "59bd3edb3b2b3264bcb5fd7400a6e6282994b5492f24ddbed6d3792211d1f6c4"
       define_method(:install) do
         bin.install "commitbrief"
         man1.install Dir["man/*.1"]
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/CommitBrief/commitbrief/releases/download/v0.9.1/commitbrief_0.9.1_linux_arm64.tar.gz"
-      sha256 "3cacfb4a1b54059316110dcad987a9c3ecbef398bba65dc5d8bc5354623133c2"
+      url "https://github.com/CommitBrief/commitbrief/releases/download/v0.9.2/commitbrief_0.9.2_linux_arm64.tar.gz"
+      sha256 "43289b7c085e49385b4f5b91401c7426a7b781bacdfdd5e95737732005ea9db5"
       define_method(:install) do
         bin.install "commitbrief"
         man1.install Dir["man/*.1"]
